@@ -1,10 +1,10 @@
 # **FIGURACE**
-![Menú principal](https://postimg.cc/phQ2qSrR)
+![Menú principal](menu_principal.png)
 
 ### **PROYECTO FINAL SEMINARIO DE LENGUAJES (PYTHON) Universidad Nacional de La Plata 2022**
 
-![Menú de juego](https://postimg.cc/nMZVCnSz)
-![Configuraciones](https://postimg.cc/RJMv8TJf)
+![Menú de juego](menu_juego.png)
+![Configuraciones](menu_configuracion.png)
 
 ### **Integrantes:**
 * [Aberastain Marzorati, Álvaro](https://github.com/AberasT)
