@@ -8,22 +8,22 @@ def iniciar_pantalla_config():
 
     nombres_datasets = ["Aleatorio", "Erupciones volcanicas", "Lagos de Argentina", "Peliculas", "Jugadores FIFA 2021"]
     
-    elem_datasets = [sg.Text("Dataset ", font="Helvetica 13", justification="center"),
+    elem_datasets = [sg.Text("Dataset ", font="Helvetica 13", s=(30)),
                 sg.Combo(nombres_datasets, key="-CONFIG_DATASET-", default_value=config_previa["dataset"], font="Helvetica 13", s = (18, 1), readonly=True)]
 
-    elem_tiempo = [sg.Text("Tiempo límite por ronda (seg)", justification="center", font="Helvetica 13"),
+    elem_tiempo = [sg.Text("Tiempo límite por ronda (seg)", s=(30), font="Helvetica 13"),
                 sg.Slider(range=(1,60), key="-CONFIG_TIEMPO-", orientation="h",border_width= 10, default_value=config_previa["valores"]["tiempo_ronda"], font="Helvetica 13", s = (18, 1), enable_events= True)]
 
-    elem_rondas = [sg.Text("Cantidad de rondas por partida", justification="center", font="Helvetica 13"),
+    elem_rondas = [sg.Text("Cantidad de rondas por partida", s=(30), font="Helvetica 13"),
                    sg.Slider(range=(1, 50), key="-CONFIG_RONDAS-", orientation="h", border_width=10, default_value=config_previa["valores"]["cant_rondas"], font="Helvetica 13", s=(18, 1), enable_events=True)]
 
-    elem_puntos_bien = [sg.Text("Puntos por correcta", font="Helvetica 13", justification="center"),
+    elem_puntos_bien = [sg.Text("Puntos por correcta", font="Helvetica 13", s=(30)),
                         sg.Slider(range=(1, 100), key="-CONFIG_PUNTOS_BIEN-", orientation="h", border_width=10, default_value=config_previa["valores"]["puntos_bien"], font="Helvetica 13", s=(18, 1), enable_events=True)]
 
-    elem_puntos_mal = [sg.Text("Puntos restados por incorrecta", font="Helvetica 13", justification="center"),
+    elem_puntos_mal = [sg.Text("Puntos restados por incorrecta", font="Helvetica 13", s=(30)),
                        sg.Slider(range=(-1, -100), key="-CONFIG_PUNTOS_MAL-", orientation="h", border_width=10, default_value=config_previa["valores"]["puntos_mal"], font="Helvetica 13", s=(18, 1), enable_events=True)]
 
-    elem_carac_tarjeta = [sg.Text("Características a mostrar por tarjeta", font="Helvetica 13", justification="center"),
+    elem_carac_tarjeta = [sg.Text("Características a mostrar por tarjeta", font="Helvetica 13", s=(30)),
                           sg.Slider(range=(1, 5), key="-CONFIG_CANT_CARAC-", orientation="h", border_width=10, default_value=config_previa["valores"]["cant_carac"], font="Helvetica 13", s=(18, 1), enable_events=True)]
 
     elem_botones = [sg.Button("Guardar",key="-CONFIG_GUARDAR-", font="Helvetica 13",s=(10, 1)), 

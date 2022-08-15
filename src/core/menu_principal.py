@@ -8,7 +8,7 @@ from . import menu_puntajes
 from . import menu_juego
 
 
-sg.theme('DarkAmber')
+sg.theme('DarkBlue')
 
 def crear_ventana_nuevo_jugador():
     """Por si por primera vez, no hay perfiles creados, crea y retorna la ventana de creación de perfiles"""
@@ -87,7 +87,6 @@ def iniciar_menu_principal():
         elif event == "-JUGAR-":
             window.close()
             window = menu_juego.iniciar_pantalla_juego()
-            print(values["-USER-"])
             window = crear_ventana_principal()
         elif event == "-PUNTAJES-":
             window.close()
@@ -110,12 +109,10 @@ def iniciar_menu_principal():
             config["dificultad"] = values["-DIFICULTAD-"]
             manejar_datos.seleccionar_dificultad(values["-DIFICULTAD-"])
         elif event == "-CONFIRMAR CREAR PRIMER JUGADOR-":
-            print(values)
             config = manejar_datos.obtener_config()
             if(menu_perfiles.crear_perfil(values, window)):
                 window.close()
                 config["nick"] = values[0]
                 manejar_datos.guardar_config(config)
                 window = crear_ventana_principal()
-
     window.close()

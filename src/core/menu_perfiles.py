@@ -105,7 +105,6 @@ def iniciar_menu_perfiles():
     window = crear_ventana_perfiles()
     while True:
         current_window, event, values = sg.read_all_windows()
-        print(f"Evento: {event}, Valores: {values}")
         if (event == sg.WIN_CLOSED) or (event == '-VOLVER-'):
             break
         elif event == '-EDITAR JUGADOR-':
